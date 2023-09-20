@@ -33,7 +33,7 @@ export const Plane = ({ planeRef }) => {
 			const viewer = new ViewerApp({
 				canvas: canvasRef.current,
 			});
-
+			console.log("view:::::", viewer);
 			const manager = await viewer.addPlugin(AssetManagerPlugin);
 
 			const currWidthWindow = await window.innerWidth;
