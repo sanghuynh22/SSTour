@@ -14,6 +14,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scrollPlane } from "../utils/scroll-plane";
+import plane3D from "../assets/plane3D.glb";
 gsap.registerPlugin(ScrollTrigger);
 export const Plane = ({ planeRef }) => {
 	const [isMobile, setIsMobile] = useState(false);
@@ -54,7 +55,7 @@ export const Plane = ({ planeRef }) => {
 
 			viewer.renderer.refreshPipeline();
 
-			await manager.addFromPath("plane3D.glb");
+			await manager.addFromPath("plane3D2.glb");
 
 			viewer.getPlugin(TonemapPlugin).config.clipBackground = true;
 			if (isMobile) {
@@ -90,7 +91,7 @@ export const Plane = ({ planeRef }) => {
 	});
 	useEffect(() => {
 		setupViewer();
-		console.log("Plane starting..... :::::::");
+		console.log("Plane starting..... :::::::", plane3D);
 	}, [isMobile]);
 
 	return (
