@@ -55,7 +55,7 @@ export const Plane = ({ planeRef }) => {
 
 			viewer.renderer.refreshPipeline();
 
-			await manager.addFromPath(plane3D);
+			await manager.addFromPath("plane3D.glb");
 
 			viewer.getPlugin(TonemapPlugin).config.clipBackground = true;
 			if (isMobile) {

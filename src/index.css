@@ -39,7 +39,7 @@ body {
 	z-index: 10;
 }
 .header.active {
-	background-color: #dfdfdd;
+	background-color: #c0c0c0;
 }
 .header_left {
 	max-width: 200px;
@@ -98,7 +98,7 @@ body {
 
 .window_container > .slogan {
 	position: absolute;
-	top: 1%;
+	top: 2%;
 	font-size: 1.9rem;
 	display: flex;
 	flex-direction: column;
@@ -510,6 +510,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	animation: fadeOut 0.5s 3s forwards;
+	-webkit-animation: fadeOut 0.5s 3s forwards;
 	pointer-events: none;
 }
 @keyframes fadeOut {
