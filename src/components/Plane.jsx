@@ -90,6 +90,7 @@ export const Plane = ({ planeRef }) => {
 	});
 	useEffect(() => {
 		setupViewer();
+		console.log("Plane starting..... :::::::");
 	}, [isMobile]);
 
 	return (
