@@ -110,7 +110,7 @@ export const scrollPlane = (pos, tar, isMobile, updatePlane) => {
 		})
 		.to(tar, {
 			x: !isMobile ? 0.973 : 0.2436,
-			y: !isMobile ? -1.195 : -0.2596,
+			y: !isMobile ? -0.195 : -0.2596,
 			z: !isMobile ? -2.98 : 0.009,
 			duration: 3,
 			scrollTrigger: {

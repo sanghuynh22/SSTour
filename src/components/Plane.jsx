@@ -42,6 +42,7 @@ export const Plane = ({ planeRef }) => {
 				const position = camera.position;
 				const target = camera.target;
 
+				console.log("position", position);
 				await viewer.addPlugin(GBufferPlugin);
 				await viewer.addPlugin(new ProgressivePlugin(32));
 				await viewer.addPlugin(new TonemapPlugin(true));
@@ -57,9 +58,11 @@ export const Plane = ({ planeRef }) => {
 				await manager.addFromPath("plane3D2.glb");
 
 				viewer.getPlugin(TonemapPlugin).config.clipBackground = true;
+				position.set(5.6815, -2, 2.42);
+				target.set(-0.00588, -0.243, -0.13);
 				if (isMobile) {
 					position.set(13.853, -3.25, 7.458);
-					target.set(0.0726, -0.0979, -0.1716);
+					target.set(0.0154, -0.17707, -0.15836);
 				}
 				window.scrollTo(0, 0);
 
@@ -94,8 +97,10 @@ export const Plane = ({ planeRef }) => {
 	}, [isMobile]);
 
 	return (
-		<div id="plane_canvas_container" ref={planeRef}>
-			<canvas id="plane_canvas" ref={canvasRef} />
+		<div className="plane">
+			<div id="plane_canvas_container" ref={planeRef}>
+				<canvas id="plane_canvas" ref={canvasRef} />
+			</div>
 		</div>
 	);
 };

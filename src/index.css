@@ -131,6 +131,10 @@ body {
 .hero:nth-child(odd) {
 	flex-direction: row-reverse;
 }
+.hero:nth-last-child(1) {
+	height: 85vh;
+	align-items: end;
+}
 .hero_imgs {
 	display: flex;
 	flex-wrap: wrap;
@@ -205,10 +209,18 @@ body {
 }
 
 /* CANVAS */
+.plane {
+	position: absolute;
+	width: 100vw;
+	/* height: 100vh; */
+	top: 0;
+	bottom: 0;
+	/* background-color: #76b5c5; */
+}
 #plane_canvas_container {
 	width: 100vw;
 	height: 100vh;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	pointer-events: none;
 	/* min-height: 831px; */

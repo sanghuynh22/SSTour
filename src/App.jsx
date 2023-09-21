@@ -14,21 +14,6 @@ import Lenis from "@studio-freight/lenis";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
 	const planeRef = useRef(null);
-	useLayoutEffect(() => {
-		gsap.to(planeRef, {
-			scrollTrigger: {
-				trigger: ".hot",
-				start: "40% bottom",
-				end: "-80% top",
-				onEnter: () => {
-					planeRef.current.style.opacity = 0;
-				},
-				onEnterBack: () => {
-					planeRef.current.style.opacity = 1;
-				},
-			},
-		});
-	}, []);
 
 	return (
 		<ReactLenis
@@ -42,7 +27,7 @@ function App() {
 			<div className="App">
 				<Loader />
 				<Header />
-				<div>
+				<div style={{ position: "relative" }}>
 					<Heros />
 					<Plane planeRef={planeRef} />
 				</div>
